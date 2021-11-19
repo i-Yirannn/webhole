@@ -321,18 +321,26 @@ class LoginPopupSelf extends Component {
             {this.state.phase === -1 && (
               <>
                 <p>
-                  <b>输入邮箱来登录 {process.env.REACT_APP_TITLE}</b>
+                  <b>输入邮箱来登录{process.env.REACT_APP_TITLE}</b>
                 </p>
               </>
             )}
             <p style={this.state.phase === -1 ? {} : { display: 'none' }}>
               <label>
-                邮箱&nbsp;
+                <a
+                    onClick={() => {
+                      alert(
+                        "我该输入什么：范例 : zhangsan0120@mails.jlu.edu.cn\n\n什么是吉大邮箱：吉大邮箱全称为吉林大学学生邮箱，是吉林大学大数据和网络管理中心为每一位吉大同学提供的免费邮箱服务。\n\n吉大邮箱怎么登陆：将邮箱网址（https://mails.jlu.edu.cn）复制到浏览器(或点击登陆框下方链接)地址栏即可进入吉大邮箱，在登录界面输入账号和密码即可登录。\n\n如何收到验证：在JLU Hollow的登陆界面输入吉大邮箱地址，点击下一步即可在吉大邮箱中收到验证码。\n\n为什么没有收到验证码：测试中发现部分同学因为从未登录过吉大邮箱，存在接收不到验证码的问题，解决方案为重新进入JLU Hollow并刷新后重新注册。"
+                      );
+                    }}
+                >
+                  有疑惑？
+                </a>
                 <input
                   ref={this.ref.username}
                   type="email"
                   autoFocus={true}
-                  defaultValue="@mails.tsinghua.edu.cn"
+                  defaultValue="@mails.jlu.edu.cn"
                   onKeyDown={(event) => {
                     if (event.key === 'Enter') {
                       this.next_step();
@@ -388,6 +396,8 @@ class LoginPopupSelf extends Component {
                       autoFocus={true}
                     />
                   </label>
+                  <br></br>
+                  <a href="https://mails.jlu.edu.cn" target="_blank">点击前往吉大邮箱</a>
                 </p>
               </>
             )}

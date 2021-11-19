@@ -121,7 +121,7 @@ export function InfoSidebar(props) {
           开源
         </p>
         <p>
-          {process.env.REACT_APP_TITLE} 网页版的诞生离不开&nbsp;
+          {process.env.REACT_APP_TITLE} 网页版基于开源项目thuhole/webhole, 它的诞生也离不开&nbsp;
           <a
             href="https://github.com/pkuhelper-web/webhole"
             target="_blank"
@@ -246,7 +246,7 @@ export class LoginForm extends Component {
                       <p>
                         <small>
                           {process.env.REACT_APP_TITLE}
-                          面向T大学生，通过T大邮箱验证您的身份并提供服务。
+                          面向JLU学生，通过JLU邮箱验证您的身份并提供服务。
                         </small>
                       </p>
                     </div>

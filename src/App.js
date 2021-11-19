@@ -160,10 +160,6 @@ class App extends Component {
                     <div className="flow-item box box-tip">
                       <p style={{ textAlign: 'left' }}>需要帮助？</p>
                       <p style={{ textAlign: 'left' }}>
-                        北京24小时心理援助热线：
-                        <a href="tel:01082951332">010-8295-1332</a>
-                      </p>
-                      <p style={{ textAlign: 'left' }}>
                         希望24小时热线：
                         <a href="tel:4001619995">400-161-9995</a>
                       </p>
